@@ -1,0 +1,296 @@
+:root {
+    --primary: #00CED1;
+    --primary-dark: #00B8C4;
+    --secondary: #20B2AA;
+    --success: #4cc9f0;
+    --warning: #f72585;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --gray: #6c757d;
+    --aqua-light: #E0FFFF;
+    --aqua-medium: #B0E0E6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fb;
+    color: var(--dark);
+    padding-bottom: 80px;
+}
+
+.section {
+    margin: 1.5rem;
+    padding: 20px;
+}
+
+.section h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-align: center;
+}
+
+.cards-scroll {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-height: 100%;
+    overflow-y: auto;
+    flex-direction: row;
+    padding: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) #ddd;
+    justify-content: center;
+}
+
+.cards-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.cards-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.cards-scroll::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+.cards-scroll .card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0, 206, 209, 0.1);
+    min-width: 280px;
+    max-width: 350px;
+    flex: 1 1 calc(33% - 25px);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards-scroll .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 206, 209, 0.2);
+}
+
+.card.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 100%;
+    min-height: 400px;
+}
+
+.card.servicio img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.card.servicio h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+}
+
+.card.servicio p {
+    font-weight: 500;
+    color: var(--gray);
+    margin-bottom: 15px;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.card.servicio .btn-reservar {
+    margin-top: auto;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(0, 206, 209, 0.3);
+}
+
+.card.servicio .btn-reservar:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 206, 209, 0.4);
+}
+
+.card.servicio .empty-message {
+    color: var(--gray);
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 40px;
+}
+
+/* Estilos para las tarjetas que se voltean */
+.element-card {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+    position: relative;
+    margin: 10px;
+}
+
+.element-card .front,
+.element-card .back {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.7s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 25px rgba(0, 206, 209, 0.15);
+}
+
+.element-card .front {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    z-index: 2;
+}
+
+.element-card .front img.icono-servicio {
+    width: 80px;
+    margin-bottom: 15px;
+    filter: brightness(0) invert(1);
+}
+
+.element-card .front img {
+    max-width: 100%;
+    height: 165px;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.element-card .front .nombre-servicio {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+}
+
+.element-card .back {
+    transform: rotateY(180deg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    z-index: 1;
+}
+
+.element-card .back .contenido-back {
+    background: rgba(0, 188, 212, 0.95);
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.element-card .back h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.element-card .back p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: white;
+}
+
+.element-card.open .front {
+    transform: rotateY(180deg);
+}
+
+.element-card.open .back {
+    transform: rotateY(360deg);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .cards-scroll .card {
+        flex: 1 1 calc(50% - 25px);
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        margin: 1rem;
+        padding: 15px;
+    }
+    
+    .section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .cards-scroll {
+        gap: 20px;
+        padding: 10px;
+    }
+    
+    .cards-scroll .card {
+        flex: 1 1 100%;
+        min-width: auto;
+    }
+    
+    .element-card {
+        width: 100%;
+        max-width: 180px;
+        height: 180px;
+    }
+    
+    .element-card .front,
+    .element-card .back {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card.servicio {
+        min-height: 350px;
+    }
+    
+    .card.servicio img {
+        height: 150px;
+    }
+    
+    .element-card {
+        max-width: 160px;
+        height: 160px;
+    }
+}

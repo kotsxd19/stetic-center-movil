@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historial de Pagos</title>
+  <link rel="stylesheet" href="./css/HistorialdePagos.css">
+  <link rel="stylesheet" href="./css/menu.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div>
+    <img src="./img/atras.png" alt="Regresar" class="btn-regresar" onclick="window.location.href='DashBoard.html'">
+  </div>
+
+  <div class="facturas-container">
+    <h2>Historial de Pagos</h2>
+    <div id="facturasList" class="facturas-list"></div>
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="./Dashboard.html" class="nav-item">
+      <img src="./img/hogar.png" alt="">
+      <span>Inicio</span>
+    </a>
+    <a href="./Perfil.html" class="nav-item">
+      <img src="./img/avatar-de-usuario.png" alt="">
+      <span>Perfil</span>
+    </a>
+    <a href="./MisCitas.html" class="nav-item">
+      <img src="./img/calendario (1).png" alt="">
+      <span>Citas</span>
+    </a>
+    <a href="./HistorialDePago.html" class="nav-item active   ">
+      <img src="./img/historial-de-transacciones.png" alt="">
+      <span>Pagos</span>
+    </a>
+    <a href="./Servicios.html" class="nav-item">
+      <img src="./img/spa.png" alt="">
+      <span>Servicios</span>
+    </a>
+  </nav>
+
+
+<script src="./js/menu.js"></script>
+  <script type="module" src="./js/Controller/pagosController.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse | SteticCenter</title>
+    <link rel="stylesheet" href="./css/Registrarse.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <img src="./img/atras.png" alt="Regresar" class="btn-regresar" onclick="window.location.href='index.html'">
+    </div>
+    <div class="inicio">
+        <div class="Containter-logo">
+            <img src="./img/logo.png" alt="Logo">
+            <h2>¡Bienvenido!</h2>
+            <h3>Regístrate</h3>
+        </div>
+        <div class="Formulario-registro">
+            <form class="form-registro" id="formRegistro">
+                <input type="hidden" id="idCliente">
+                <input type="text" placeholder="Nombre completo" required id="Nombre">
+                <input type="text" placeholder="Dirección" required id="Dirección">
+                <input type="email" placeholder="Correo electrónico" required id="Email">
+                <input type="password" placeholder="Contraseña" required id="Contraseña">
+                <button type="submit" id="btnRegistrar">Registrarse</button>
+            </form>
+        </div>
+        <section>
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+            <div class="wave wave4"></div>
+        </section>
+    </div>
+    <script type="module" src="./js/Controller/RegistrarController.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

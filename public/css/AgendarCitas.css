@@ -1,0 +1,61 @@
+/* Puedes agregar esto al final de css/Servicios.css */
+.agendar-container {
+    max-width: 400px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.agendar-paso {
+    margin-bottom: 28px;
+}
+
+.agendar-paso h3 {
+    color: #00bfae;
+    margin-bottom: 12px;
+}
+
+.agendar-paso select,
+.agendar-paso input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.btn-agendar {
+    padding: 12px 0;
+    width: 100%;
+    background: #00bfae;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-agendar:hover {
+    background: #009688;
+}
+
+.btn-regresar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    cursor: pointer;
+    z-index: 2000;
+    transition: filter 0.2s;
+}
+.btn-regresar:hover {
+    filter: brightness(0.8);
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Cliente</title>
+    
+    <link rel="stylesheet" href="./css/perfil.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/FondoModo.css">
+    <link rel="stylesheet" href="./css/customModal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div>
+        <img src="./img/atras.png" alt="Regresar" class="btn-regresar"
+        onclick="window.location.href='Dashboard.html'">
+    </div>
+    
+    <div class="wrapper">
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    
+    <div class="perfil-container">
+        <div class="foto">
+            <img src="./img/perfil-perfil.png" alt="" class="perfil-imagen">
+        </div>
+        <div class="./perfil-datos">
+            <h2><span id="nombre"></span></h2>
+            <h3>Cliente</h3>
+            <h3><span id="correo"></span></h3>
+        </div>
+        <div class="perfil-acciones">
+            <button id="btnCerrarSesion" class="btn-CerrarSesión">Cerrar sesión</button>
+        </div>
+    </div>
+     
+    <nav class="bottom-nav">
+        <a href="./Dashboard.html" class="nav-item">
+            <img src="./img/hogar.png" alt="">
+            <span>Inicio</span>
+        </a>
+        <a href="./Perfil.html" class="nav-item active">
+            <img src="./img/avatar-de-usuario.png" alt="">
+            <span>Perfil</span>
+        </a>
+        <a href="./MisCitas.html" class="nav-item">
+            <img src="./img/calendario (1).png" alt="">
+            <span>Citas</span>
+        </a>
+        <a href="./HistorialDePago.html" class="nav-item">
+            <img src="./img/historial-de-transacciones.png" alt="">
+            <span>Pagos</span>
+        </a>
+        <a href="./Servicios.html" class="nav-item">
+            <img src="./img/spa.png" alt="">
+            <span>Servicios</span>
+        </a>
+    </nav>
+    
+    <!-- Scripts -->
+    <script src="./js/customModal.js"></script>
+    <script src="./js/fondoperfil.js"></script>
+    <script src="./js/menu.js"></script>
+    <script type="module" src="./js/Controller/perfilController.js"></script>
+    <script src="./js/FondoModo.js"></script>
+</body>
+</html>

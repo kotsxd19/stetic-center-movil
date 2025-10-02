@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Citas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/Citas.css">
+    <link rel="stylesheet" href="./css/customModal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <main class="main-content">
+            <header class="app-header">
+                <div class="user-info">
+                    <div class="user-avatar" id="avatar">👤</div>
+                    <div>
+                        <h2 id="clienteNombre">Bienvenido</h2>
+                        <p id="clienteEmail"></p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-cards">
+                <div class="card stat-card card-1">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="citasPendientes">0</h3>
+                        <p>Citas Pendientes</p>
+                    </div>
+                </div>
+                <div class="card stat-card card-2">
+                    <div class="stat-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="citasCompletadas">0</h3>
+                        <p>Citas Completadas</p>
+                    </div>
+                </div>
+                <div class="card stat-card card-3">
+                    <div class="stat-icon">
+                        <i class="fas fa-times-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="citasCanceladas">0</h3>
+                        <p>Citas Canceladas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <h2 id="currentMonth">Cargando...</h2>
+                    <div class="calendar-nav">
+                        <button id="prevMonth" title="Mes anterior">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button id="todayBtn" title="Ir a hoy">Hoy</button>
+                        <button id="nextMonth" title="Siguiente mes">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="week-days">
+                    <div>Dom</div><div>Lun</div><div>Mar</div><div>Mié</div><div>Jue</div><div>Vie</div><div>Sáb</div>
+                </div>
+                <div class="days-grid" id="daysGrid">
+                    <!-- Los días se cargarán dinámicamente -->
+                </div>
+            </div>
+
+            <div class="appointments">
+                <div class="appointments-header">
+                    <h2>Próximas Citas</h2>
+                    <button class="btn btn-primary" id="new-appointment-btn">
+                        <i class="fas fa-plus"></i> Nueva Cita
+                    </button>
+                </div>
+                <ul class="appointment-list" id="appointmentList">
+                    <!-- Las citas se cargarán dinámicamente desde la API -->
+                    <li class="appointment-item no-appointments" style="display: none;">
+                        <div class="appointment-info text-center">
+                            <p><i class="far fa-calendar"></i> No tienes citas programadas</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal" id="appointment-modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Agendar Nueva Cita</h3>
+                <button type="button" class="close-modal">&times;</button>
+            </div>
+            <form id="appointment-form">
+                <input type="hidden" id="IdCita">
+                <div class="form-group">
+                    <label for="usuario">Doctor/Especialista</label>
+                    <select class="form-control" id="usuario" required>
+                        <option value="">Seleccionar doctor</option>
+                        <!-- Los usuarios se cargarán dinámicamente desde la API -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="servicio">Servicio</label>
+                    <select class="form-control" id="servicio" required>
+                        <option value="">Seleccionar servicio</option>
+                        <!-- Los servicios se cargarán dinámicamente desde la API -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Fecha</label>
+                    <input type="date" class="form-control" id="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="horario">Horario</label>
+                    <select class="form-control" id="horario" required>
+                        <option value="">Seleccionar horario</option>
+                        <!-- Los horarios se cargarán dinámicamente desde la API -->
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-cancel close-modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Agendar Cita</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="./Dashboard.html" class="nav-item">
+            <img src="./img/hogar.png" alt="">
+            <span>Inicio</span>
+        </a>
+        <a href="./Perfil.html" class="nav-item">
+            <img src="./img/avatar-de-usuario.png" alt="">
+            <span>Perfil</span>
+        </a>
+        <a href="./MisCitas.html" class="nav-item active">
+            <img src="./img/calendario (1).png" alt="">
+            <span>Citas</span>
+        </a>
+        <a href="./HistorialDePago.html" class="nav-item">
+            <img src="./img/historial-de-transacciones.png" alt="">
+            <span>Pagos</span>
+        </a>
+        <a href="./Servicios.html" class="nav-item">
+            <img src="./img/spa.png" alt="">
+            <span>Servicios</span>
+        </a>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="./js/customModal.js"></script>
+    <script src="./js/menu.js"></script>
+    <script type="module" src="./js/Controller/citasController.js"></script>
+    <script src="./js/citasCalendar.js"></script>
+</body>
+</html>

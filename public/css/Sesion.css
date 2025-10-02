@@ -1,0 +1,261 @@
+:root {
+    --primary: #00CED1;
+    --primary-dark: #00B8C4;
+    --secondary: #20B2AA;
+    --aqua-light: #E0FFFF;
+    --aqua-medium: #B0E0E6;
+    --warning: #f72585;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fb;
+}
+
+.inicio {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--aqua-light) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.Containter-logo {
+    z-index: 100;
+    margin-bottom: 20px;
+}
+
+.Containter-logo img {
+    max-width: 280px;
+    width: 100%;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 10px 25px rgba(0,206,209,0.3));
+}
+
+.Containter-logo h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.Formulario-Sesion {
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,206,209,0.2);
+    padding: 40px 30px;
+    max-width: 400px;
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+    background: white;
+    overflow: hidden;
+    z-index: 100;
+    animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-Sesion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.form-Sesion input[type="text"],
+.form-Sesion input[type="password"] {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid var(--aqua-light);
+    border-radius: 12px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-Sesion input[type="text"]:focus,
+.form-Sesion input[type="password"]:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,206,209,0.1);
+}
+
+.btn-entrar-link {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: var(--primary);
+    color: white;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,206,209,0.3);
+}
+
+.btn-entrar-link:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,206,209,0.4);
+}
+
+.btn-regresar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2000;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.btn-regresar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.btn-regresar img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+#errorMsg {
+    color: var(--warning);
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(247, 37, 133, 0.1);
+    border-radius: 8px;
+}
+
+/* Olas - Same as index.css */
+section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+section .wave {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 200%;
+    height: 100px;
+    background: url('/public/img/wave.png');
+    background-size: 1000px 100px;
+}
+
+section .wave.wave1 {
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+section .wave.wave2 {
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+section .wave.wave3 {
+    animation: animate3 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+
+section .wave.wave4 {
+    animation: animate4 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+
+@keyframes animate {
+    0% { background-position-x: 0; }
+    100% { background-position-x: 1000px; }
+}
+
+@keyframes animate2 {
+    0% { background-position-x: 0; }
+    100% { background-position-x: -1000px; }
+}
+
+@keyframes animate3 {
+    0% { background-position-x: 0; }
+    100% { background-position-x: 1000px; }
+}
+
+@keyframes animate4 {
+    0% { background-position-x: 0; }
+    100% { background-position-x: 1000px; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .Formulario-Sesion {
+        padding: 30px 20px;
+        max-width: 95vw;
+    }
+    
+    .Containter-logo img {
+        max-width: 240px;
+    }
+    
+    .Containter-logo h2 {
+        font-size: 20px;
+    }
+    
+    section {
+        height: 80px;
+    }
+    
+    section .wave {
+        height: 60px;
+        background-size: 600px 60px;
+    }
+}
