@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080";
+import API_URL from "../config.js";
 
 export async function getFacturas(page = 0, size = 8) {
     try {

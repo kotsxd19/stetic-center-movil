@@ -1,7 +1,8 @@
 import {getFacturas } from "../services/PagoService.js";
 
 import url from '../config.js';
-async function fetchUser() {
+
+/*async function fetchUser() {
   try {
     const res = await fetch(`${url}/auth/cliente/me`, {
       method: "GET",
@@ -16,7 +17,7 @@ async function fetchUser() {
     console.error("Error obteniendo usuario:", err);
     return null;
   }
-}
+}*/
 
 function formatFecha(fechaStr) {
   const fecha = new Date(fechaStr);
@@ -31,8 +32,8 @@ function formatFecha(fechaStr) {
 document.addEventListener('DOMContentLoaded', async () => {
   const facturasList = document.getElementById("facturasList");
 
-  const user = await fetchUser();
-  if (!user) return;
+  /*const user = await fetchUser();
+  if (!user) return;*/
 
   async function mostrarFacturas() {
     if (!facturasList) return;

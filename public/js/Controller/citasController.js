@@ -40,7 +40,7 @@ function formatearFecha(fecha) {
     return date.toLocaleDateString('es-ES', opciones);
 }
 
-async function fetchUser() {
+/*async function fetchUser() {
     try {
         const res = await fetch(`${url}/auth/cliente/me`, {
             method: "GET",
@@ -54,7 +54,7 @@ async function fetchUser() {
         console.error("Error obteniendo usuario:", err);
         return null;
     }
-}
+}*/
 
 function actualizarInfoUsuario() {
     if (!usuarioActual) return;
@@ -303,11 +303,11 @@ function showLoader(show) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-    usuarioActual = await fetchUser();
+    /*usuarioActual = await fetchUser();
     if (!usuarioActual) {
         mostrarError('No se pudo obtener la información del usuario');
         return;
-    }
+    }*/
     const form = document.getElementById('appointment-form');
     const modal = document.getElementById('appointment-modal');
     const btnAdd = document.getElementById('new-appointment-btn');

@@ -4,6 +4,7 @@ import {
   getProductos
 } from "../services/Servicios.js";
 
+/*
 async function fetchUser() {
   try {
     const res = await fetch("http://localhost:8080/auth/cliente/me", {
@@ -18,11 +19,12 @@ async function fetchUser() {
     console.error("Error obteniendo usuario:", err);
     return null;
   }
-}
+}*/
 
 document.addEventListener("DOMContentLoaded", async () => {
   const Servicio = document.getElementById("ServiciosList");
-  const user = await fetchUser();
+  
+  /*const user = await fetchUser();
   
   if (!user) {
     console.error("Usuario no autenticado");
@@ -36,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       </div>
     `;
     return;
-  }
+  }*/
 
   async function mostrarServicios() {
     if (!Servicio) return;

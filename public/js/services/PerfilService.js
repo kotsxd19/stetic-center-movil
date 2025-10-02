@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/api/clientes";
+import API_URL from "../config.js";
 
 export async function ActualizarCliente(data) {
     try {
@@ -24,7 +24,7 @@ export async function ActualizarCliente(data) {
 
 export async function ObtenerClientes() {
     try {
-        const res = await fetch(`${API_BASE}/api/clientes/GetClientes`, {
+        const res = await fetch(`${API_URL}/api/clientes/GetClientes`, {
             method: "GET",
             credentials: "include",
             headers: { "Content-Type": "application/json" }

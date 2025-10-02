@@ -4,7 +4,7 @@ import {
 
 
 
-  async function fetchUser() {
+  /*async function fetchUser() {
   try {
     const res = await fetch("http://localhost:8080/auth/cliente/me", {
       method: "POST",
@@ -19,7 +19,7 @@ import {
     console.error("Error al Ingresar usuario:", err);
     return null;
   }
-}
+}*/
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -47,8 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Error en el registro: " + error.message);
         }
 
-        const user = await fetchUser();
-  if (!user) return;
+        /*const user = await fetchUser();
+  if (!user) return;*/
   });
   });
 

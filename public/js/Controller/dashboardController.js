@@ -2,7 +2,7 @@ import { getClientes, getServicios, getCitas, getFacturas } from "../services/da
 
 import url from '../config.js';
 
-async function fetchUser() {
+/*async function fetchUser() {
   try {
     const res = await fetch(`${url}/auth/cliente/me`, {
       method: "GET",
@@ -17,7 +17,7 @@ async function fetchUser() {
     console.error("Error obteniendo usuario:", err);
     return null;
   }
-}
+}*/
 
 function formatFecha(fechaStr) {
   const fecha = new Date(fechaStr);
@@ -37,11 +37,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   const clienteNombre = document.getElementById("clienteNombre");
   const clienteEmail = document.getElementById("clienteEmail");
 
-  const user = await fetchUser();
-  if (!user) return;
+  /*const user = await fetchUser();
+  if (!user) return;*/
 
-  if (clienteNombre) clienteNombre.textContent = user.nombre;
-  if (clienteEmail) clienteEmail.textContent = user.correo;
+  /*if (clienteNombre) clienteNombre.textContent = user.nombre;
+  if (clienteEmail) clienteEmail.textContent = user.correo;*/
 
   async function mostrarServicios() {
     if (!serviciosList) return;

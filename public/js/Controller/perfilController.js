@@ -2,7 +2,7 @@ import { ActualizarCliente, ObtenerClientes } from '../services/PerfilService.js
 import urlApi from '../config.js';
 
 // Función para obtener datos del usuario autenticado
-async function fetchUser() {
+/*async function fetchUser() {
   try {
     
     const res = await fetch(`${urlApi}/auth/cliente/me`, {
@@ -20,7 +20,7 @@ async function fetchUser() {
     console.error("Error obteniendo usuario:", err);
     return null;
   }
-}
+}*/
 
 // Función para cerrar sesión
 async function logout() {
@@ -100,19 +100,26 @@ document.addEventListener('DOMContentLoaded', async() => {
   const btnCerrarSesion = document.getElementById("btnCerrarSesion");
   
   // Obtener usuario actual
-  const user = await fetchUser();
+  /*const user = await fetchUser();
   
   if (!user) {
     // Si no hay usuario autenticado, redirigir al login
     window.location.href = 'IniciarSesion.html';
     return;
   }
+    
   
   const c = user;
   
-  // Mostrar información del usuario
-  if (nombre) nombre.textContent = user.nombre;
+
+   if (nombre) nombre.textContent = user.nombre;
   if (correo) correo.textContent = user.correo;
+  */
+  
+  
+  
+  // Mostrar información del usuario
+ 
   
   // Event listener para cerrar sesión
   if (btnCerrarSesion) {

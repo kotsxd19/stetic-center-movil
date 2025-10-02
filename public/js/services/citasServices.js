@@ -1,10 +1,10 @@
-const API_URL = "http://localhost:8080/";
+import API_URL from "../config.js";
 
 // ===== GET METHODS =====
 
 export async function obtenerTodasLasCitas() {
     try {
-        const response = await fetch(`${API_URL}ApiCitas/GetCitas`, {
+        const response = await fetch(`${API_URL}/ApiCitas/GetCitas`, {
             method: "GET",
             credentials: "include",
             headers: { "Content-Type": "application/json" }
@@ -20,7 +20,7 @@ export async function obtenerTodasLasCitas() {
 
 export async function obtenerUsuarios() {
     try {
-        const response = await fetch(`${API_URL}api/Usuario/GetUsers`, {
+        const response = await fetch(`${API_URL}/api/Usuario/GetUsers`, {
             method: "GET",
             credentials: "include",
             headers: { "Content-Type": "application/json" }
@@ -36,7 +36,7 @@ export async function obtenerUsuarios() {
 
 export async function obtenerClientes() {
     try {
-        const response = await fetch(`${API_URL}api/clientes/GetClientes`, {
+        const response = await fetch(`${API_URL}/api/clientes/GetClientes`, {
             method: "GET",
             credentials: "include",
             headers: { "Content-Type": "application/json" }
@@ -52,7 +52,7 @@ export async function obtenerClientes() {
 
 export async function obtenerHorarios() {
     try {
-        const response = await fetch(`${API_URL}ApiHorario/GetHorario`, {
+        const response = await fetch(`${API_URL}/ApiHorario/GetHorario`, {
             method: "GET",
             credentials: "include",
             headers: { "Content-Type": "application/json" }
@@ -68,7 +68,7 @@ export async function obtenerHorarios() {
 
 export async function obtenerServicios() {
     try {
-        const response = await fetch(`${API_URL}ApiServicios/ConsultarServicios`, {
+        const response = await fetch(`${API_URL}/ApiServicios/ConsultarServicios`, {
             method: "GET",
             credentials: "include",
             headers: { "Content-Type": "application/json" }
@@ -88,7 +88,7 @@ export async function crearCita(citaData) {
     try {
         console.log('Datos originales de la cita:', citaData);
 
-        const response = await fetch(`${API_URL}ApiCitas/PostCitas`, {
+        const response = await fetch(`${API_URL}/ApiCitas/PostCitas`, {
             method: "POST",
             credentials: "include",
             headers: { "Content-Type": "application/json" },
@@ -126,7 +126,7 @@ export async function actualizarCita(id, citaData) {
     try {
         console.log('Actualizando cita ID ' + id + ':', citaData);
 
-        const response = await fetch(`${API_URL}ApiCitas/PutCitas/${id}`, {
+        const response = await fetch(`${API_URL}/ApiCitas/PutCitas/${id}`, {
             method: "PUT",
             credentials: "include",
             headers: { "Content-Type": "application/json" },
@@ -163,7 +163,7 @@ export async function actualizarCita(id, citaData) {
 
 export async function eliminarCita(id) {
     try {
-        const response = await fetch(`${API_URL}ApiCitas/DeleteCitas/${id}`, {
+        const response = await fetch(`${API_URL}/ApiCitas/DeleteCitas/${id}`, {
             method: "DELETE",
             credentials: "include",
             headers: { "Content-Type": "application/json" }

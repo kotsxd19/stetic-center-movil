@@ -1,5 +1,4 @@
 import url from './config.js';
-
 document.addEventListener('DOMContentLoaded', function() {
     const loginButton = document.getElementById('btn-login');
     const passwordInput = document.getElementById('password');

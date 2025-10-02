@@ -183,33 +183,3 @@ section .wave.wave4 {
     0% { background-position-x: 0; }
     100% { background-position-x: 1000px; }
 }
-
-/* Responsive */
-@media (max-width: 600px) {
-    .welcome-card {
-        padding: 30px 20px;
-        max-width: 95vw;
-    }
-    
-    .Containter-logo img {
-        max-width: 240px;
-    }
-    
-    .Containter-logo h2 {
-        font-size: 20px;
-    }
-    
-    .card-buttons {
-        flex-direction: column;
-    }
-    
-    section {
-        height: 80px;
-    }
-    
-    section .wave {
-        height: 60px;
-        background-size: 600px 60px;
-    }
-}
-

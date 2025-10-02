@@ -1,4 +1,5 @@
-import API_URL from '../config.js';
+import API_URL from "../config.js";
+
 export async function createCliente(data) {
     try {
         const response = await fetch(`${API_URL}/api/clientes/PostClientes`, {

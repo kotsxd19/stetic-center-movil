@@ -1,8 +1,8 @@
-const API_BASE = "http://localhost:8080";
+import API_URL from '../config.js';
 
 export async function getClientes() {
     try {
-        const res = await fetch(`${API_BASE}/api/clientes/GetClientes`, {
+        const res = await fetch(`${API_URL}/api/clientes/GetClientes`, {
             method: "GET",
             credentials: "include",
             headers: { "Content-Type": "application/json" }
@@ -18,7 +18,7 @@ export async function getClientes() {
 
 export async function getServicios(page = 0, size = 8) {
     try {
-        const res = await fetch(`${API_BASE}/ApiServicios/GetServiciosPaginados?page=${page}&size=${size}`, {
+        const res = await fetch(`${API_URL}/ApiServicios/GetServiciosPaginados?page=${page}&size=${size}`, {
             method: "GET",
             credentials: "include",
             headers: { "Content-Type": "application/json" }
@@ -34,7 +34,7 @@ export async function getServicios(page = 0, size = 8) {
 
 export async function getCitas(page = 0, size = 8) {
     try {
-        const res = await fetch(`${API_BASE}/ApiCitas/GetCitasPaginadas?page=${page}&size=${size}`, {
+        const res = await fetch(`${API_URL}/ApiCitas/GetCitasPaginadas?page=${page}&size=${size}`, {
             method: "GET",
             credentials: "include",
             headers: { "Content-Type": "application/json" }
@@ -51,7 +51,7 @@ export async function getCitas(page = 0, size = 8) {
 
 export async function getFacturas(page = 0, size = 8) {
     try {
-        const res = await fetch(`${API_BASE}/api/GetFacturasPaginadas?page=${page}&size=${size}`, {
+        const res = await fetch(`${API_URL}/api/GetFacturasPaginadas?page=${page}&size=${size}`, {
             method: "GET",
             credentials: "include",
             headers: { "Content-Type": "application/json" }

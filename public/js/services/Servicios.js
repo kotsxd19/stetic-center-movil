@@ -1,9 +1,9 @@
-const API_URLS = "http://localhost:8080/";
+const API_URLS = "../config.js";
 
 
 export async function getServicios(page = 0, size = 8) {
   try {
-      const res = await fetch(`${API_URLS}ApiServicios/GetServiciosPaginados?page=${page}&size=${size}`, {
+      const res = await fetch(`${API_URLS}/ApiServicios/GetServiciosPaginados?page=${page}&size=${size}`, {
           method: "GET",
           credentials: "include",
           headers: { "Content-Type": "application/json" }
@@ -19,7 +19,7 @@ export async function getServicios(page = 0, size = 8) {
 
 export async function getPaquetes(page = 0, size = 8) {
   try {
-      const res = await fetch(`${API_URLS}api/paquetes/GetServiciosPaginados?page=${page}&size=${size}`, {
+      const res = await fetch(`${API_URLS}/api/paquetes/GetServiciosPaginados?page=${page}&size=${size}`, {
           method: "GET",
           credentials: "include",
           headers: { "Content-Type": "application/json" }
@@ -35,7 +35,7 @@ export async function getPaquetes(page = 0, size = 8) {
 
 export async function getProductos(page = 0, size = 8) {
   try {
-      const res = await fetch(`${API_URLS}api/productos/GetProductosPaginado?page=${page}&size=${size}`, {
+      const res = await fetch(`${API_URLS}/api/productos/GetProductosPaginado?page=${page}&size=${size}`, {
           method: "GET",
           credentials: "include",
           headers: { "Content-Type": "application/json" }
