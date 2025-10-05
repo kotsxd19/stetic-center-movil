@@ -2,6 +2,13 @@ import url from './config.js';
 document.addEventListener('DOMContentLoaded', function() {
     const loginButton = document.getElementById('btn-login');
     const passwordInput = document.getElementById('password');
+    const ForgotPasswordButton = document.getElementById('btn-contraseñaOlvidada');
+
+    if (ForgotPasswordButton) {
+        ForgotPasswordButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'RecuperarContraseña.html';
+        });
 
 
 
@@ -79,4 +86,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     
-});
+}});

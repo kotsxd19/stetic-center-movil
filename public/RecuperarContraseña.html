@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión | SteticCenter</title>
-    <link rel="stylesheet" href="./css/Sesion.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <title>Recuperacion de contraseña</title>
+    <link rel="stylesheet" href="../public/css/RecuperacionContraseña.css">
+    <!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    (function(){
+        emailjs.init("7wXX27z432idNoiVw");
+    })();
+</script>
 </head>
 
 <body>
@@ -21,9 +27,11 @@
         <div class="Formulario-Sesion">
             <form id="formLogin" class="form-Sesion">
                 <input type="text" placeholder="Correo" required id="usuario">
-                <input type="password" placeholder="Contraseña" required id="password">
-                <button type="submit" class="btn-entrar-link" id="btn-login">Entrar</button>
-                <button class="btn-Salir-link" id="btn-contraseñaOlvidada">¿Olvido su contraseña?</button>
+                <!-- El input de código se oculta inicialmente -->
+                <input type="text" placeholder="Codigo Verificacion" required id="codigoVerificacion"
+                    style="display: none;">
+                <!-- Cambiamos a button para evitar enviar el formulario hasta que se muestre el input -->
+                <button type="button" class="btn-entrar-link" id="btn-login">Código verificación</button>
                 <p id="errorMsg" style="color: red; display: none; margin-top: 10px;"></p>
             </form>
         </div>
@@ -34,8 +42,7 @@
             <div class="wave wave4"></div>
         </section>
     </div>
-    <script type="module" src="./js/inicioSesion.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/ContraseñaOlvidada.js"></script>
 </body>
 
 </html>

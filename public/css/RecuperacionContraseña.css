@@ -82,7 +82,7 @@ body, html {
 }
 
 .form-Sesion input[type="text"],
-.form-Sesion input[type="password"] {
+.form-Sesion input[type="ContraseñaOlvidada"] {
     width: 100%;
     padding: 14px 18px;
     border: 2px solid var(--aqua-light);
@@ -94,11 +94,12 @@ body, html {
 }
 
 .form-Sesion input[type="text"]:focus,
-.form-Sesion input[type="password"]:focus {
+.form-Sesion input[type="ContraseñaOlvidada"]:focus {
     border-color: var(--primary);
     outline: none;
     box-shadow: 0 0 0 3px rgba(0,206,209,0.1);
 }
+
 
 .btn-entrar-link {
     display: block;

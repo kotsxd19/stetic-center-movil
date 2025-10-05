@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Contraseña</title>
+    <link rel="stylesheet" href="../public/css/NuevaContraseña.css">
+</head>
+<body>
+    <div>
+        <img src="./img/atras.png" alt="Regresar" class="btn-regresar" onclick="window.location.href='../index.html'">
+    </div>
+    <div class="inicio">
+        <div class="Containter-logo">
+            <img src="./img/logo.png" alt="Logo">
+            <h2>Nueva Contraseña</h2>
+        </div>
+        <div class="Formulario-Sesion">
+            <form id="formNuevaContraseña" class="form-Sesion">
+                <input type="password" placeholder="Nueva Contraseña" required id="nuevaContraseña">
+                <input type="password" placeholder="Confirmar Contraseña" required id="confirmarContraseña">
+                <button type="submit" class="btn-entrar-link" id="btn-cambiar">Cambiar Contraseña</button>
+                <p id="errorMsg" style="color: red; display: none; margin-top: 10px;"></p>
+            </form>
+        </div>
+        <section>
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+            <div class="wave wave4"></div>
+        </section>
+    </div>
+    <script src="js/NuevaContraseña.js"></script>
+</body>
+</html>

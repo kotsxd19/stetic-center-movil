@@ -81,7 +81,6 @@ body, html {
     margin-top: 20px;
 }
 
-.form-Sesion input[type="text"],
 .form-Sesion input[type="password"] {
     width: 100%;
     padding: 14px 18px;
@@ -93,7 +92,6 @@ body, html {
     font-family: 'Poppins', sans-serif;
 }
 
-.form-Sesion input[type="text"]:focus,
 .form-Sesion input[type="password"]:focus {
     border-color: var(--primary);
     outline: none;
@@ -125,29 +123,10 @@ body, html {
     box-shadow: 0 6px 20px rgba(0,206,209,0.4);
 }
 
-.btn-Salir-link {
-    display: block;
-    width: 100%;
-    padding: 14px;
-    background: var(--primary);
-    color: white;
-    border-radius: 25px;
-    font-size: 17px;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    margin-top: 15px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    box-sizing: border-box;
-    border: none;
-    box-shadow: 0 4px 15px rgba(0,206,209,0.3);
-}
-
-.btn-Salir-link:hover {
-    background: var(--warning);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,206,209,0.4);
+.btn-entrar-link:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
 }
 
 .btn-regresar {
@@ -187,7 +166,7 @@ body, html {
     border-radius: 8px;
 }
 
-/* Olas - Same as index.css */
+/* Olas */
 section {
     position: absolute;
     bottom: 0;
