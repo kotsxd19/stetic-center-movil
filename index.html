@@ -3,29 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido a SteticCenter</title>
-    <link rel="stylesheet" href="public/css/index.css">
+    <title>Cargando - SteticCenter</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/index.css">
 </head>
 <body>
-    <div class="inicio">
-        <div class="Containter-logo">
-            <img src="public/img/logo.png" alt="Logo">
-            <h2>¡Bienvenido a SteticCenter!</h2>
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-logo">
+            <img src="public/img/logo.png" alt="Logo" id="logoImg" style="display: none;">
+            <div class="loading-logo-text" id="logoText">S</div>
         </div>
-        <div class="welcome-card">
-            <p>¡Nos alegra tenerte aquí! Elige una opción para continuar:</p>
-            <div class="card-buttons">
-                <a href="./public/Registrarse.html" class="card-btn">Registrarse</a>
-                <a href="./public/IniciarSesion.html" class="card-btn">Iniciar sesión</a>
-            </div>
-        </div>
-        <section>
-            <div class="wave wave1"></div>
-            <div class="wave wave2"></div>
-            <div class="wave wave3"></div>
-            <div class="wave wave4"></div>
-        </section>
+        <div class="loading-text">SteticCenter</div>
+        <div class="spinner"></div>
+        <div class="loading-progress" id="progress">Cargando...</div>
     </div>
+
+    <script src="/public/js/index.js"></script>
 </body>
 </html>
